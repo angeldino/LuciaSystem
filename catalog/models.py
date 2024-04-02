@@ -22,6 +22,3 @@ class User(models.Model):
 
     def __str__(self):
         return self.name + " " +  self.ap_pat + " " + self.ap_mat + " - Turno: " + self.shift
-    
-
-
