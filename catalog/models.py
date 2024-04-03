@@ -22,3 +22,13 @@ class User(models.Model):
 
     def __str__(self):
         return self.name + " " +  self.ap_pat + " " + self.ap_mat + " - Turno: " + self.shift
+    
+class Supplier(models.Model):
+    id = models.IntegerField(primary_key=True)
+    plant_code = models.CharField(max_length=50, null=True, blank=True)
+    name = models.CharField(max_length=50, null=True, blank=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    convenio = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return self.plant_code + " - " + self.name
