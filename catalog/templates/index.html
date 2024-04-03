@@ -1,1 +1,20 @@
-<h1>Catálogo de Usuarios - Daimler</h1>
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Starion</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'images/icon.png' %}">
+    </head>
+    <body>
+        <div id="header_menu">
+            <img id="logo" src="{% static 'images/cmwte.png' %}" alt="Logo">
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'consultas' %}">Consultas</a></li>
+                <li><a href="{% url 'capturas' %}">Capturas</a></li>
+            </ul>
+        </div>
+        <img id="background" src="{% static 'images/background.jpg' %}" alt="Logo">
+    </body>
+</html>
