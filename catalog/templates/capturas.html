@@ -1,3 +1,31 @@
 {% load static %}
-{% include 'index.html' %}
-<
+{% include 'menu.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capturas</title>
+    </head>
+    <body>
+        <div id="captura">
+            <form action="/procesar_formulario" method="post">
+                <label for="campo1">Empleado ID:</label><br>
+                <input type="text" id="campo1" name="campo1"><br>
+                <label for="campo2">Nombres:</label><br>
+                <input type="text" id="campo2" name="campo2"><br>
+                <label for="campo3">Campo 3:</label><br>
+                <input type="text" id="campo3" name="campo3"><br>
+                <label for="campo4">Campo 4:</label><br>
+                <input type="text" id="campo4" name="campo4"><br>
+                <label for="campo5">Campo 5:</label><br>
+                <input type="text" id="campo5" name="campo5"><br>
+                <label for="campo6">Campo 6:</label><br>
+                <input type="text" id="campo6" name="campo6"><br>
+                <label for="campo7">Campo 7:</label><br>
+                <input type="text" id="campo7" name="campo7"><br>
+                <label for="campo8">Campo 8:</label><br>
+                <input type="text" id="campo8" name="campo8"><br><br>
+                <input type="submit" value="Enviar">
+              </form>
+        </div>
+    </body>
+</html>

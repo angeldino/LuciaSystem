@@ -1,3 +1,37 @@
 {% load static %}
-{% include 'index.html' %}
-<p>Este es el archivo de consultas, más el archivo de index</p>
+{% include 'menu.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Starion</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Empleado ID</th>
+                <th>nombre</th>
+                <th>Apellido</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Usuario Rebe</th>
+                <th>Usuario PC</th>
+                <th>Turno</th>
+                <th>Cliente</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.user_id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.ap_pat }}</td>
+                <td>{{ user.ap_mat }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.rebe_user }}</td>
+                <td>{{ user.pc_user }}</td>
+                <td>{{ user.shift }}</td>
+                <td>{{ user.client }}</td>
+                <!-- Agrega más columnas según tu modelo -->
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
