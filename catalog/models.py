@@ -19,6 +19,7 @@ class User(models.Model):
     pc_user = models.CharField(max_length=50, null=True, blank=True)
     shift = models.CharField(max_length=50, null=True, blank=True)
     client = models.ForeignKey(Client, null=True, blank=True, on_delete=models.CASCADE)
+    position = models.CharField(max_length=50, null=True, blank=True)
 
     def __str__(self):
         return self.name + " " +  self.ap_pat + " " + self.ap_mat + " - Turno: " + self.shift
